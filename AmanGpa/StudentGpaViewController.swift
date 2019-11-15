@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class StudentGpaViewController: UIViewController {
     
@@ -21,6 +22,9 @@ class StudentGpaViewController: UIViewController {
     
     @IBOutlet var fifthCourse: UITextField!
     @IBOutlet var GPALabel: UILabel!
+    
+    var audio: AVAudioPlayer!
+    let sound = ["Win"]
     
     var marks: Double?
     override func viewDidLoad() {
@@ -44,7 +48,15 @@ let CourseFifth = GpaConvert(grades: Int(fifthCourse.text!)!)
 let gpa = ((CourseOne * 4) + (CourseTwo * 3) + (CourseThree * 3) + (CourseFour * 5) +  (CourseFifth * 5)) / 20.0
       GPALabel.text = "GPA:\(gpa)/4"
         
-       // if gpa > 2.8
+        if gpa > 2.8{
+          
+        let selectbutton = sound[sender.tag]
+        let soundurl = Bundle.main.url(forResource: selectbutton, withExtension: "wav")
+        audio = try! AVAudioPlayer(contentsOf: soundurl!)
+        audio.play()
+            
+            
+        }
         
     }
     /*

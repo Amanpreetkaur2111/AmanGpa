@@ -16,6 +16,7 @@
 		9B29334B237F2678009FF16D /* student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B29334A237F2678009FF16D /* student.swift */; };
 		9B29334D237F2C39009FF16D /* StudentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B29334C237F2C39009FF16D /* StudentTableViewController.swift */; };
 		9B29334F237F4557009FF16D /* StudentGpaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B29334E237F4557009FF16D /* StudentGpaViewController.swift */; };
+		9B293351237F6232009FF16D /* Win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9B293350237F6232009FF16D /* Win.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		9B29334A237F2678009FF16D /* student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = student.swift; sourceTree = "<group>"; };
 		9B29334C237F2C39009FF16D /* StudentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewController.swift; sourceTree = "<group>"; };
 		9B29334E237F4557009FF16D /* StudentGpaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentGpaViewController.swift; sourceTree = "<group>"; };
+		9B293350237F6232009FF16D /* Win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Win.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		9B293335237F2252009FF16D /* AmanGpa */ = {
 			isa = PBXGroup;
 			children = (
+				9B293350237F6232009FF16D /* Win.wav */,
 				9B293336237F2252009FF16D /* AppDelegate.swift */,
 				9B293338237F2252009FF16D /* SceneDelegate.swift */,
 				9B29333A237F2252009FF16D /* ViewController.swift */,
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B293343237F2252009FF16D /* LaunchScreen.storyboard in Resources */,
+				9B293351237F6232009FF16D /* Win.wav in Resources */,
 				9B293340237F2252009FF16D /* Assets.xcassets in Resources */,
 				9B29333E237F2252009FF16D /* Main.storyboard in Resources */,
 			);
