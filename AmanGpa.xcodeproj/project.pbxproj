@@ -15,6 +15,7 @@
 		9B293343237F2252009FF16D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B293341237F2252009FF16D /* LaunchScreen.storyboard */; };
 		9B29334B237F2678009FF16D /* student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B29334A237F2678009FF16D /* student.swift */; };
 		9B29334D237F2C39009FF16D /* StudentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B29334C237F2C39009FF16D /* StudentTableViewController.swift */; };
+		9B29334F237F4557009FF16D /* StudentGpaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B29334E237F4557009FF16D /* StudentGpaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9B293344237F2252009FF16D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B29334A237F2678009FF16D /* student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = student.swift; sourceTree = "<group>"; };
 		9B29334C237F2C39009FF16D /* StudentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewController.swift; sourceTree = "<group>"; };
+		9B29334E237F4557009FF16D /* StudentGpaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentGpaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				9B293344237F2252009FF16D /* Info.plist */,
 				9B29334A237F2678009FF16D /* student.swift */,
 				9B29334C237F2C39009FF16D /* StudentTableViewController.swift */,
+				9B29334E237F4557009FF16D /* StudentGpaViewController.swift */,
 			);
 			path = AmanGpa;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B29333B237F2252009FF16D /* ViewController.swift in Sources */,
+				9B29334F237F4557009FF16D /* StudentGpaViewController.swift in Sources */,
 				9B293337237F2252009FF16D /* AppDelegate.swift in Sources */,
 				9B293339237F2252009FF16D /* SceneDelegate.swift in Sources */,
 				9B29334D237F2C39009FF16D /* StudentTableViewController.swift in Sources */,
