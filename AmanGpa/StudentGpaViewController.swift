@@ -17,7 +17,7 @@ class StudentGpaViewController: UIViewController {
     var SemDelegate: semesterTableViewController?
     var audio: AVAudioPlayer!
     let sound = ["Win"]
-    var a: Double?
+    var b : Double?
     var marks: Double?
     var gpa = 0.0
     override func viewDidLoad() {
@@ -72,31 +72,31 @@ func GpaConvert(grades: Int) ->
     switch grades {
                 
       case 0...49:
-       a = 0.0
+       b = 0.0
        case 50...59:
-       a = 1.0
+       b = 1.0
        case 60...62:
-       a = 1.7
+       b = 1.7
        case 63...66:
-       a = 2.0
+       b = 2.0
        case 67...69:
-       a = 2.3
+       b = 2.3
        case 70...72:
-       a = 2.7
+       b = 2.7
        case 73...76:
-      a = 3.0
+      b = 3.0
        case 77...79:
-       a = 3.2
+       b = 3.2
        case 80...86:
-       a = 3.5
+       b = 3.5
        case 87...93:
-       a = 3.7
+       b = 3.7
        case 94...100:
-       a = 4.0
+       b = 4.0
     default:
         break
             }
-     return a!
+     return b!
     }
 
 }
