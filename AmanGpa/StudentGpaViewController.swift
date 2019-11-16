@@ -12,24 +12,20 @@ import AVFoundation
 class StudentGpaViewController: UIViewController {
     
     @IBOutlet var Courses: [UITextField]!
-    
-    
     @IBOutlet var CourseLabel: [UILabel]!
-    
-    
     @IBOutlet var GPALabel: UILabel!
     var SemDelegate: semesterTableViewController?
     var audio: AVAudioPlayer!
     let sound = ["Win"]
-    
+    var a: Double?
     var marks: Double?
     var gpa = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
         
 for item in CourseLabel.indices {
-    CourseLabel[item].text = storeStudent.CourseArray[(SemDelegate!.semesterIndx)][item]
-        }
+    CourseLabel[item].text = storeStudent.CourseArray[(SemDelegate!.semesterIndex)][item]
+    }
 
         // Do any additional setup after loading the view.
     }
@@ -37,15 +33,18 @@ for item in CourseLabel.indices {
 
     @IBAction func Calculate(_ sender: UIButton) {
 
-        for i in Courses.indices{
+    for i in Courses.indices{
+    marks = GpaConvert(grades: Int(Courses[i].text!)!)
+    students.StudentSave[SemDelegate!.stud_index].marks[SemDelegate!.semesterIndex][i] = Int(Courses[i].text!)!
+       let creditScore = CourseLabel[i].text!
+    gpa += (marks! * Double(String(creditScore[creditScore.index(before: creditScore.endIndex)]))!)
             
-            marks = GpaConvert(grades: Int(Courses[i].text!)!)
-            students.StudentSave[SemDelegate!.stud_index].marks[SemDelegate!.semesterIndx][i] = Int(Courses[i].text!)!
-            
-            
-        }
-  
-      GPALabel.text = "GPA:\(gpa)/4"
+    }
+        
+  let SemGpa = gpa / 20.0
+students.StudentSave[SemDelegate!.stud_index].gpa[SemDelegate!.semesterIndex] = SemGpa
+               
+    GPALabel.text = String(format:"GPA: %2f/4", SemGpa)
         
         if gpa > 2.8{
           
@@ -54,8 +53,7 @@ for item in CourseLabel.indices {
         audio = try! AVAudioPlayer(contentsOf: soundurl!)
         audio.play()
             
-            
-        }
+    }
         
     }
     /*
@@ -72,33 +70,32 @@ func GpaConvert(grades: Int) ->
         Double {
     switch grades {
                 
-        case 0...49:
-        marks = 0.0
-        case 50...59:
-        marks = 1.0
-        case 60...62:
-        marks = 1.7
-        case 63...66:
-        marks = 2.0
-        case 67...69:
-        marks = 2.3
-        case 70...72:
-        marks = 2.7
-        case 73...76:
-        marks = 3.0
-        case 77...79:
-        marks = 3.2
-        case 80...86:
-        marks = 3.5
-        case 87...93:
-        marks = 3.7
-        case 94...100:
-        marks = 4.0
+      case 0...49:
+       a = 0.0
+       case 50...59:
+       a = 1.0
+       case 60...62:
+       a = 1.7
+       case 63...66:
+       a = 2.0
+       case 67...69:
+       a = 2.3
+       case 70...72:
+       a = 2.7
+       case 73...76:
+      a = 3.0
+       case 77...79:
+       a = 3.2
+       case 80...86:
+       a = 3.5
+       case 87...93:
+       a = 3.7
+       case 94...100:
+       a = 4.0
     default:
         break
             }
-            
-        return marks!
+     return a!
     }
 
 }

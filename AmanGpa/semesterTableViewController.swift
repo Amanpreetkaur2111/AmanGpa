@@ -11,12 +11,12 @@ import UIKit
 class semesterTableViewController: UITableViewController {
 
     
-    var semesterIndx = -1
+    var semesterIndex = -1
     var stud_index = -1
     var d_Main : StudentTableViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
-        stud_index = d_Main!.stud_index
+        stud_index = (d_Main?.stud_index)!
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -38,12 +38,17 @@ class semesterTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "semester", for: indexPath)
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "semester") {
         
         cell.textLabel?.text = storeStudent.SemesterArray[indexPath.row]
         // Configure the cell...
 
 return cell
+    }
+return UITableViewCell()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        d_Main?.tableView.reloadData()
     }
     
 
@@ -92,13 +97,14 @@ return cell
         
         if let detail = segue.destination as? StudentGpaViewController{
                detail.SemDelegate = self
+        }
             if let cell = sender as? UITableViewCell{
                 
-                semesterIndx = tableView.indexPath(for: cell)!.row
+                semesterIndex = tableView.indexPath(for: cell)!.row
             }
             
         }
     }
     
 
-}
+
