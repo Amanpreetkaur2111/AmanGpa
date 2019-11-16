@@ -25,7 +25,7 @@ class StudentGpaViewController: UIViewController {
         
 for item in CourseLabel.indices {
     CourseLabel[item].text = storeStudent.CourseArray[(SemDelegate!.semesterIndex)][item]
-Courses[item].text = String(students.StudentSave[(SemDelegate?.stud_index)!].marks[(SemDelegate?.semesterIndex)!][item])
+Courses[item].text = String(students.StudentSave[(SemDelegate?.semesterIndex)!].marks[(SemDelegate?.semesterIndex)!][item])
     }
 
         // Do any additional setup after loading the view.
@@ -36,14 +36,14 @@ Courses[item].text = String(students.StudentSave[(SemDelegate?.stud_index)!].mar
 
     for i in Courses.indices{
     marks = GpaConvert(grades: Int(Courses[i].text!)!)
-    students.StudentSave[SemDelegate!.stud_index].marks[SemDelegate!.semesterIndex][i] = Int(Courses[i].text!)!
+    students.StudentSave[SemDelegate!.semesterIndex].marks[SemDelegate!.semesterIndex][i] = Int(Courses[i].text!)!
        let creditScore = CourseLabel[i].text!
     gpa += (marks! * Double(String(creditScore[creditScore.index(before: creditScore.endIndex)]))!)
             
     }
         
   let SemGpa = gpa / 20.0
-students.StudentSave[SemDelegate!.stud_index].gpa[SemDelegate!.semesterIndex] = SemGpa
+students.StudentSave[SemDelegate!.semesterIndex].gpa[SemDelegate!.semesterIndex] = SemGpa
                
     GPALabel.text = String(format:"GPA: %2f/4", SemGpa)
         
