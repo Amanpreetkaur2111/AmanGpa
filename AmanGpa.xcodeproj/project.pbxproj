@@ -17,6 +17,8 @@
 		9B29334D237F2C39009FF16D /* StudentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B29334C237F2C39009FF16D /* StudentTableViewController.swift */; };
 		9B29334F237F4557009FF16D /* StudentGpaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B29334E237F4557009FF16D /* StudentGpaViewController.swift */; };
 		9B293351237F6232009FF16D /* Win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9B293350237F6232009FF16D /* Win.wav */; };
+		9B293353237F6D48009FF16D /* storeStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B293352237F6D48009FF16D /* storeStudent.swift */; };
+		9B293355237F6F8A009FF16D /* semesterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B293354237F6F8A009FF16D /* semesterTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		9B29334C237F2C39009FF16D /* StudentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewController.swift; sourceTree = "<group>"; };
 		9B29334E237F4557009FF16D /* StudentGpaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentGpaViewController.swift; sourceTree = "<group>"; };
 		9B293350237F6232009FF16D /* Win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Win.wav; sourceTree = "<group>"; };
+		9B293352237F6D48009FF16D /* storeStudent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storeStudent.swift; sourceTree = "<group>"; };
+		9B293354237F6F8A009FF16D /* semesterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = semesterTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				9B29334A237F2678009FF16D /* student.swift */,
 				9B29334C237F2C39009FF16D /* StudentTableViewController.swift */,
 				9B29334E237F4557009FF16D /* StudentGpaViewController.swift */,
+				9B293352237F6D48009FF16D /* storeStudent.swift */,
+				9B293354237F6F8A009FF16D /* semesterTableViewController.swift */,
 			);
 			path = AmanGpa;
 			sourceTree = "<group>";
@@ -152,11 +158,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B29333B237F2252009FF16D /* ViewController.swift in Sources */,
+				9B293355237F6F8A009FF16D /* semesterTableViewController.swift in Sources */,
 				9B29334F237F4557009FF16D /* StudentGpaViewController.swift in Sources */,
 				9B293337237F2252009FF16D /* AppDelegate.swift in Sources */,
 				9B293339237F2252009FF16D /* SceneDelegate.swift in Sources */,
 				9B29334D237F2C39009FF16D /* StudentTableViewController.swift in Sources */,
 				9B29334B237F2678009FF16D /* student.swift in Sources */,
+				9B293353237F6D48009FF16D /* storeStudent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

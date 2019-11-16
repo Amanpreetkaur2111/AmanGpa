@@ -29,7 +29,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="k3o-le-DQX" kind="show" id="rPW-2x-oLH"/>
+                                    <segue destination="jx6-aQ-2Di" kind="show" id="Oq6-kd-nCh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -140,6 +140,38 @@
             </objects>
             <point key="canvasLocation" x="770" y="421"/>
         </scene>
+        <!--Semester Table View Controller-->
+        <scene sceneID="5Bu-9g-gsq">
+            <objects>
+                <tableViewController id="jx6-aQ-2Di" customClass="semesterTableViewController" customModule="AmanGpa" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tNT-NA-3aR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="semester" id="Fqw-Zt-YTR">
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fqw-Zt-YTR" id="AcN-w0-h03">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="k3o-le-DQX" kind="show" id="Uz6-kY-0wO"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jx6-aQ-2Di" id="B5X-aO-IDi"/>
+                            <outlet property="delegate" destination="jx6-aQ-2Di" id="dCd-4f-LLa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Oqg-zv-7xU"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gOH-bd-kDY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="858" y="-294"/>
+        </scene>
         <!--Student Gpa View Controller-->
         <scene sceneID="WHL-wg-sPJ">
             <objects>
@@ -222,8 +254,9 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLQ-Cy-KAA">
-                                <rect key="frame" x="207" y="75" width="133" height="58"/>
+                                <rect key="frame" x="131" y="75" width="209" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Calculate"/>
                                 <connections>
                                     <action selector="Calculate:" destination="k3o-le-DQX" eventType="touchUpInside" id="GH7-0U-PuF"/>
@@ -245,7 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rDW-Ht-boI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="770" y="-326"/>
+            <point key="canvasLocation" x="1692" y="-295"/>
         </scene>
     </scenes>
 </document>
