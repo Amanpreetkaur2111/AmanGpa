@@ -11,41 +11,40 @@ import AVFoundation
 
 class StudentGpaViewController: UIViewController {
     
-    @IBOutlet var firstCourse: UITextField!
+    @IBOutlet var Courses: [UITextField]!
     
     
-    @IBOutlet var secondCourse: UITextField!
+    @IBOutlet var CourseLabel: [UILabel]!
     
-    @IBOutlet var thirdCourse: UITextField!
     
-    @IBOutlet var fourthCourse: UITextField!
-    
-    @IBOutlet var fifthCourse: UITextField!
     @IBOutlet var GPALabel: UILabel!
-    
+    var SemDelegate: semesterTableViewController?
     var audio: AVAudioPlayer!
     let sound = ["Win"]
     
     var marks: Double?
+    var gpa = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+for item in CourseLabel.indices {
+    CourseLabel[item].text = storeStudent.CourseArray[(SemDelegate!.semesterIndx)][item]
+        }
 
         // Do any additional setup after loading the view.
     }
     
 
     @IBAction func Calculate(_ sender: UIButton) {
-let CourseOne = GpaConvert(grades: Int(firstCourse.text!)!)
-        
-let CourseTwo = GpaConvert(grades: Int(secondCourse.text!)!)
-        
-let CourseThree = GpaConvert(grades: Int(thirdCourse.text!)!)
-        
-let CourseFour = GpaConvert(grades: Int(fourthCourse.text!)!)
-        
-let CourseFifth = GpaConvert(grades: Int(fifthCourse.text!)!)
-        
-let gpa = ((CourseOne * 4) + (CourseTwo * 3) + (CourseThree * 3) + (CourseFour * 5) +  (CourseFifth * 5)) / 20.0
+
+        for i in Courses.indices{
+            
+            marks = GpaConvert(grades: Int(Courses[i].text!)!)
+            students.StudentSave[SemDelegate!.stud_index].marks[SemDelegate!.semesterIndx][i] = Int(Courses[i].text!)!
+            
+            
+        }
+  
       GPALabel.text = "GPA:\(gpa)/4"
         
         if gpa > 2.8{

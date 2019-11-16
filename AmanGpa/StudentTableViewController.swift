@@ -11,7 +11,7 @@ import UIKit
 class StudentTableViewController: UITableViewController,UISearchResultsUpdating {
     
     
-    
+    var stud_index = -1
     var filterStudent = [students]()
     let searchController = UISearchController(searchResultsController: nil)
 
@@ -116,6 +116,16 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
         
         if let detailofStudent = segue.destination as? ViewController{
             detailofStudent.studDelegate = self
+        }
+        
+        if let sem = segue.destination as? semesterTableViewController{
+            sem.d_Main = self
+            
+            if let cell = sender as? UITableViewCell{
+            
+                stud_index = tableView.indexPath(for: cell)!.row
+                
+            }
         }
     }
 

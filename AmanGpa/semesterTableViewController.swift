@@ -10,9 +10,13 @@ import UIKit
 
 class semesterTableViewController: UITableViewController {
 
+    
+    var semesterIndx = -1
+    var stud_index = -1
+    var d_Main : StudentTableViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        stud_index = d_Main!.stud_index
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -78,14 +82,23 @@ return cell
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        if let detail = segue.destination as? StudentGpaViewController{
+               detail.SemDelegate = self
+            if let cell = sender as? UITableViewCell{
+                
+                semesterIndx = tableView.indexPath(for: cell)!.row
+            }
+            
+        }
     }
-    */
+    
 
 }

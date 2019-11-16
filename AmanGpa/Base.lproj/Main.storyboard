@@ -269,11 +269,16 @@
                     <navigationItem key="navigationItem" id="6dj-ak-iQo"/>
                     <connections>
                         <outlet property="GPALabel" destination="GY0-De-lhv" id="n7y-fd-zsi"/>
-                        <outlet property="fifthCourse" destination="0GX-Ou-mKB" id="hj2-oX-787"/>
-                        <outlet property="firstCourse" destination="zdh-TT-g3a" id="Gsr-hI-a69"/>
-                        <outlet property="fourthCourse" destination="HD0-zZ-zAe" id="Eb2-or-2k8"/>
-                        <outlet property="secondCourse" destination="ugs-ym-axO" id="Ggc-qW-WDG"/>
-                        <outlet property="thirdCourse" destination="mfM-id-KMg" id="Adh-YI-gzC"/>
+                        <outletCollection property="Courses" destination="zdh-TT-g3a" collectionClass="NSMutableArray" id="EEL-xN-hrd"/>
+                        <outletCollection property="Courses" destination="ugs-ym-axO" collectionClass="NSMutableArray" id="guN-Py-emP"/>
+                        <outletCollection property="Courses" destination="mfM-id-KMg" collectionClass="NSMutableArray" id="qRs-QP-EWr"/>
+                        <outletCollection property="Courses" destination="HD0-zZ-zAe" collectionClass="NSMutableArray" id="3U4-F5-bQd"/>
+                        <outletCollection property="Courses" destination="0GX-Ou-mKB" collectionClass="NSMutableArray" id="fp4-0F-nXY"/>
+                        <outletCollection property="CourseLabel" destination="2Xc-IA-nkO" collectionClass="NSMutableArray" id="8RF-RF-Ar1"/>
+                        <outletCollection property="CourseLabel" destination="0LE-Sy-9Lk" collectionClass="NSMutableArray" id="gs2-aB-zao"/>
+                        <outletCollection property="CourseLabel" destination="F6P-H3-InK" collectionClass="NSMutableArray" id="tNi-ea-PjP"/>
+                        <outletCollection property="CourseLabel" destination="swa-40-Szb" collectionClass="NSMutableArray" id="Hpp-Yb-ZTt"/>
+                        <outletCollection property="CourseLabel" destination="wxd-M8-x9O" collectionClass="NSMutableArray" id="wxM-D2-IPR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rDW-Ht-boI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
