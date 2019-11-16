@@ -64,6 +64,7 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
     }
         // Configure the cell...
     cell.textLabel?.text = "\(std.FirstName + "" + "\(std.LastName)")"
+    cell.detailTextLabel?.text = String(format: "%2f", std.cgpa)
         return cell
     }
     

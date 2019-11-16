@@ -25,6 +25,7 @@ class StudentGpaViewController: UIViewController {
         
 for item in CourseLabel.indices {
     CourseLabel[item].text = storeStudent.CourseArray[(SemDelegate!.semesterIndex)][item]
+Courses[item].text = String(students.StudentSave[(SemDelegate?.stud_index)!].marks[(SemDelegate?.semesterIndex)!][item])
     }
 
         // Do any additional setup after loading the view.
